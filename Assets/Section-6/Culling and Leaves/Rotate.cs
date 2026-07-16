@@ -4,9 +4,10 @@ using UnityEngine;
 
 public class Rotatate : MonoBehaviour
 {
+    public float Speed = 2;
     // Update is called once per frame
     void Update()
     {
-        transform.Rotate (0, 0.2f, 0);
+        transform.Rotate(Vector3.up * Speed * Time.deltaTime, Space.Self);
     }
 }
